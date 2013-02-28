@@ -165,8 +165,7 @@ set cscopetag
 """"""""""""""""""""""""""""""
 "" neocomplcache
 """"""""""""""""""""""""""""""
-" set at ~/.vim/conf/neocomplcache_conf.vim
-
+let g:neocomplcache_enable_at_startup = 1
 
 """"""""""""""""""""""""""""""
 " howmarks setting
