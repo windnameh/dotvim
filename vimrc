@@ -2,7 +2,6 @@
 "
 " Author: Colors Huang
 " Email: windnameh@gmail.com
-" Version: 2013.Feb.16
 "
 " ~/.vimrc
 "
@@ -28,7 +27,7 @@ set history=2000
 """"""""""""""""""""""""""""""
 "" guifont
 """"""""""""""""""""""""""""""
-set guifont=DejaVu\ Sans\ Mono\ 11
+"set guifont=DejaVu\ Sans\ Mono\ 11
 
 
 """"""""""""""""""""""""""""""
@@ -107,12 +106,6 @@ highlight CursorLine cterm=none ctermbg=235 guibg=#262626
 
 
 """"""""""""""""""""""""""""""
-"" guifont
-""""""""""""""""""""""""""""""
-set guifont=DejaVu\ Sans\ Mono\ 11
-
-
-""""""""""""""""""""""""""""""
 "" disable toolbar at gui mode
 """"""""""""""""""""""""""""""
 set guioptions-=m  "remove menu bar
@@ -151,7 +144,6 @@ map <F3>c O/** */<Left><Left>
 "" cflow
 """"""""""""""""""""""""""""""
 au BufNewFile,BufRead *.cflow setf cflow
-
 
 
 """"""""""""""""""""""""""""""
@@ -213,17 +205,15 @@ let Tlist_Show_One_File = 1
 """"""""""""""""""""""""""""""
 "" NERDTree
 """"""""""""""""""""""""""""""
-nmap <leader>e  :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 " Set the window width
-let NERDTreeWinSize = 23
+let NERDTreeWinSize = 40
 " Set the window position
 let NERDTreeWinPos = "right"
 " Auto centre
 let NERDTreeAutoCenter = 0
 " Not Highlight the cursor line
 let NERDTreeHighlightCursorline = 0
-
-
 
 """"""""""""""""""""""""""""""
 "" misc KET binding
