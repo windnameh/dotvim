@@ -179,28 +179,11 @@ hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
 """"""""""""""""""""""""""""""
 "nmap <silent> <leader>mk :MarksBrowser<cr>
 
-
 """"""""""""""""""""""""""""""
-"" Taglist
+"" Tagbar
 """"""""""""""""""""""""""""""
-nmap <F12> :Tlist<CR>
-" Split to the right side of the screen
-let Tlist_Use_Left_Window = 1
-" Set the window width
-let Tlist_WinWidth = 40
-" Sort by the order
-let Tlist_Sort_Type = "order"
-" Do not display the help info
-let Tlist_Compact_Format = 1
-" If you are the last, kill yourself
-let Tlist_Exit_OnlyWindow = 1
-" Do not close tags for other files
-let Tlist_File_Fold_Auto_Close = 1
-" Do not show folding tree
-let Tlist_Enable_Fold_Column = 0
-" Always display one file tags
-let Tlist_Show_One_File = 1
-
+nmap <F12> :TagbarToggle<CR>
+let g:tagbar_left = 1
 
 """"""""""""""""""""""""""""""
 "" NERDTree
