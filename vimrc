@@ -27,7 +27,9 @@ set history=2000
 """"""""""""""""""""""""""""""
 "" guifont
 """"""""""""""""""""""""""""""
-"set guifont=DejaVu\ Sans\ Mono\ 11
+if has('gui_running')
+        set guifont=inconsolata\ 14
+endif
 
 
 """"""""""""""""""""""""""""""
@@ -184,6 +186,7 @@ hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
 """"""""""""""""""""""""""""""
 nmap <F12> :TagbarToggle<CR>
 let g:tagbar_left = 1
+let g:tagbar_sort = 0
 
 """"""""""""""""""""""""""""""
 "" NERDTree
