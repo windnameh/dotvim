@@ -43,17 +43,18 @@ endif
 """"""""""""""""""""""""""""""
 "" indent
 """"""""""""""""""""""""""""""
-if &filetype=="c" || &filetype=="cpp" || &filetype=="h"
-	set cindent
+if &filetype=="c" || &filetype=="cc" || &filetype=="h"
+	"" linux coding style
+	let g:loaded_linuxsty = 1
 else
 	set smartindent
+	set noexpandtab
+	set tabstop=8
+	set shiftwidth=8
+	set textwidth=80
+	set colorcolumn=80
 endif
-set smarttab
-set expandtab
-set tabstop=8
-set shiftwidth=8
-set textwidth=80
-set colorcolumn=80
+
 
 """"""""""""""""""""""""""""""
 "" foldmethod
