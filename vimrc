@@ -43,10 +43,11 @@ endif
 """"""""""""""""""""""""""""""
 "" indent
 """"""""""""""""""""""""""""""
-if &filetype=="c" || &filetype=="cc" || &filetype=="h"
-	"" linux coding style
-	let g:loaded_linuxsty = 1
+if &filetype=="c" || &filetype=="sc" || &filetype=="h"
 else
+	"" disable linux coding style
+	let g:loaded_linuxsty = 1
+
 	set smartindent
 	set noexpandtab
 	set tabstop=8
@@ -76,6 +77,7 @@ endif
 """"""""""""""""""""""""""""""
 "" molokai, solarized-dark, solarized-light
 let s:vim_theme="solarized-dark"
+"let s:vim_theme="solarized-light"
 "let g:molokai_original = 1
 "colorscheme molokai
 "colorscheme kolor
