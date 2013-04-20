@@ -74,41 +74,40 @@ endif
 
 """"""""""""""""""""""""""""""
 "" colorscheme settting
+"" with Line highlight
 """"""""""""""""""""""""""""""
 "" molokai, solarized-dark, solarized-light
-let s:vim_theme="solarized-dark"
-"let s:vim_theme="solarized-light"
-"let g:molokai_original = 1
-"colorscheme molokai
-"colorscheme kolor
-if s:.vim_theme == "molokai"
+"let s:vim_theme="Tomorrow-Night-Eighties"
+if !has('s.vim_theme')
+	colorscheme Tomorrow-Night
+	set cursorline
+	highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+elseif s:.vim_theme == "Tomorrow-Night-Eighties"
+	colorscheme Tomorrow-Night-Eighties
+	set cursorline
+	highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+elseif s:.vim_theme == "molokai"
 	let g:molokai_original = 1
 	colorscheme molokai
+	set cursorline
+	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
 elseif s:.vim_theme == "solarized-dark"
 	set background=dark
 	if !has('gui_running')
 		let g:solarized_termcolors=256
 	endif
 	colorscheme solarized
+	set cursorline
+	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
 elseif s:.vim_theme == "solarized-light"
 	set background=light
 	if !has('gui_running')
 		let g:solarized_termcolors=256
 	endif
 	colorscheme solarized
-else
-	let g:molokai_original = 1
-	colorscheme molokai
+	set cursorline
+	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
 endif
-
-""""""""""""""""""""""""""""""
-"" Line highlight
-""""""""""""""""""""""""""""""
-set cursorline
-" color of highlight line
-"set cursorcolumn	 
-highlight CursorLine cterm=none ctermbg=235 guibg=#262626
-
 
 """"""""""""""""""""""""""""""
 "" disable toolbar at gui mode
