@@ -24,6 +24,10 @@ set number
 set hlsearch
 set history=2000
 
+" Toggle line numbers and fold column for easy copying:
+nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+
+
 """"""""""""""""""""""""""""""
 "" guifont
 """"""""""""""""""""""""""""""
@@ -39,6 +43,11 @@ if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
+
+""""""""""""""""""""""""""""""
+"" Spec C syntax highlight
+""""""""""""""""""""""""""""""
+autocmd BufRead,BufNewFile *.sc set filetype=c
 
 """"""""""""""""""""""""""""""
 "" indent
@@ -124,6 +133,12 @@ set guioptions-=L  "remove Taglist scroll bar
 filetype on
 filetype plugin on
 filetype indent on
+
+
+""""""""""""""""""""""""""""""
+"" ignored file
+""""""""""""""""""""""""""""""
+set wildignore=*.o
 
 
 """"""""""""""""""""""""""""""
