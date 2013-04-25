@@ -87,7 +87,8 @@ endif
 """"""""""""""""""""""""""""""
 "" molokai, solarized-dark, solarized-light
 "let s:vim_theme="Tomorrow-Night-Eighties"
-if !has('s.vim_theme')
+let s:vim_theme="molokai"
+if !exists('s:vim_theme')
 	colorscheme Tomorrow-Night
 	set cursorline
 	highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
@@ -97,6 +98,7 @@ elseif s:.vim_theme == "Tomorrow-Night-Eighties"
 	highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
 elseif s:.vim_theme == "molokai"
 	let g:molokai_original = 1
+	let g:rehash256 = 1
 	colorscheme molokai
 	set cursorline
 	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
