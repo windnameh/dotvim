@@ -9,13 +9,13 @@
 
 """""""""""""""""""""""""""""
 "" pathogen
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 """""""""""""""""""""""""""""
 "" misc
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""
 set nocompatible
 syntax on
 set noic	"noic: case sensitive ic: case insensitive
@@ -221,11 +221,9 @@ let NERDTreeAutoCenter = 0
 let NERDTreeHighlightCursorline = 0
 
 """"""""""""""""""""""""""""""
-"" misc KET binding
+"" gundo tree
 """"""""""""""""""""""""""""""
-" fuzzyfinder (l9 lib requred)
-nnoremap <F9>ff  :FufFile<CR>
-nnoremap <F9>fb  :FufBuffer<CR>
-" fullscreen bindingding
-" shell.vim
-"
+let g:gundo_width = 60
+let g:gundo_preview_height = 40
+let g:gundo_right = 1
+nnoremap <F5> :GundoToggle<CR>
