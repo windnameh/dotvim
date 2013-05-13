@@ -49,6 +49,7 @@ endif
 """"""""""""""""""""""""""""""
 autocmd BufRead,BufNewFile *.sc set filetype=c
 
+
 """"""""""""""""""""""""""""""
 "" indent
 """"""""""""""""""""""""""""""
@@ -88,6 +89,7 @@ endif
 "" molokai, solarized-dark, solarized-light
 "let s:vim_theme="Tomorrow-Night-Eighties"
 let s:vim_theme="molokai"
+"let s:vim_theme="solarized-dark"
 if !exists('s:vim_theme')
 	colorscheme Tomorrow-Night
 	set cursorline
@@ -120,6 +122,7 @@ elseif s:.vim_theme == "solarized-light"
 	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
 endif
 
+
 """"""""""""""""""""""""""""""
 "" disable toolbar at gui mode
 """"""""""""""""""""""""""""""
@@ -144,24 +147,6 @@ set wildignore=*.o
 
 
 """"""""""""""""""""""""""""""
-"" doxygen
-""""""""""""""""""""""""""""""
-let g:DoxygenToolkit_commentType = "C"
-let g:DoxygenToolkit_briefTag_pre="@brief  "
-let g:DoxygenToolkit_paramTag_pre="@param "
-let g:DoxygenToolkit_returnTag="@returns   "
-let g:DoxygenToolkit_authorTag="@author  "
-let g:DoxygenToolkit_dateTag="@date "
-let g:DoxygenToolkit_versionTag="@version "
-let g:DoxygenToolkit_briefTag_funcName="yes"
-let g:doxygen_enhanced_color=1
-map <F3>a :DoxAuthor
-map <F3>f :Dox
-map <F3>b :DoxBlock
-map <F3>c O/** */<Left><Left>
-
-
-""""""""""""""""""""""""""""""
 "" cflow
 """"""""""""""""""""""""""""""
 au BufNewFile,BufRead *.cflow setf cflow
@@ -175,30 +160,12 @@ let GtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
 set cscopetag
 
+
 """"""""""""""""""""""""""""""
 "" neocomplcache
 """"""""""""""""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
 
-""""""""""""""""""""""""""""""
-" howmarks setting
-""""""""""""""""""""""""""""""
-" Enable ShowMarks
-let showmarks_enable = 1
-" Show which marks
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-" Ignore help, quickfix, non-modifiable buffers
-let showmarks_ignore_type = "hqm"
-" Hilight lower & upper marks
-let showmarks_hlline_lower = 1
-let showmarks_hlline_upper = 1 
-" For showmarks plugin
-hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
-hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black 
-""""""""""""""""""""""""""""""
-" markbrowser setting
-""""""""""""""""""""""""""""""
-"nmap <silent> <leader>mk :MarksBrowser<cr>
 
 """"""""""""""""""""""""""""""
 "" Tagbar
@@ -206,6 +173,7 @@ hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
 nmap <F12> :TagbarToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_sort = 0
+
 
 """"""""""""""""""""""""""""""
 "" NERDTree
@@ -219,6 +187,7 @@ let NERDTreeWinPos = "right"
 let NERDTreeAutoCenter = 0
 " Not Highlight the cursor line
 let NERDTreeHighlightCursorline = 0
+
 
 """"""""""""""""""""""""""""""
 "" gundo tree
