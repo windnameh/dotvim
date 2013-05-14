@@ -10,8 +10,10 @@
 """""""""""""""""""""""""""""
 "" pathogen
 """""""""""""""""""""""""""""
+filetype off
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+execute pathogen#helptags()
 
 """""""""""""""""""""""""""""
 "" misc
@@ -51,13 +53,34 @@ autocmd BufRead,BufNewFile *.sc set filetype=c
 
 
 """"""""""""""""""""""""""""""
+"" file format
+""""""""""""""""""""""""""""""
+filetype on
+filetype plugin on
+filetype indent on
+
+
+""""""""""""""""""""""""""""""
+"" ignored file
+""""""""""""""""""""""""""""""
+set wildignore=*.o
+
+
+""""""""""""""""""""""""""""""
 "" indent
 """"""""""""""""""""""""""""""
-if &filetype=="c" || &filetype=="sc" || &filetype=="h"
-else
-	"" disable linux coding style
-	let g:loaded_linuxsty = 1
+"" disable linux coding style
+let g:loaded_linuxsty = 1
 
+if &filetype=="c" || &filetype=="sc" || &filetype=="h"
+	"" enable linux coding style
+	let g:loaded_linuxsty = 0
+elseif &filetype=="py"
+	" Load the whole plugin
+	"let g:pymode = 0
+	" python folding
+	let g:pymode_folding = 0
+else
 	set smartindent
 	set noexpandtab
 	set tabstop=8
@@ -130,20 +153,6 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove Taglist scroll bar
-
-
-""""""""""""""""""""""""""""""
-"" file format
-""""""""""""""""""""""""""""""
-filetype on
-filetype plugin on
-filetype indent on
-
-
-""""""""""""""""""""""""""""""
-"" ignored file
-""""""""""""""""""""""""""""""
-set wildignore=*.o
 
 
 """"""""""""""""""""""""""""""
