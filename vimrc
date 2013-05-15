@@ -47,48 +47,38 @@ endif
 
 
 """"""""""""""""""""""""""""""
-"" Spec C syntax highlight
-""""""""""""""""""""""""""""""
-autocmd BufRead,BufNewFile *.sc set filetype=c
-
-
-""""""""""""""""""""""""""""""
 "" file format
 """"""""""""""""""""""""""""""
 filetype on
 filetype plugin on
 filetype indent on
 
-
 """"""""""""""""""""""""""""""
 "" ignored file
 """"""""""""""""""""""""""""""
 set wildignore=*.o
 
+""""""""""""""""""""""""""""""
+"" Spec C syntax highlight
+""""""""""""""""""""""""""""""
+autocmd BufRead,BufNewFile *.sc set filetype=c
+
 
 """"""""""""""""""""""""""""""
-"" indent
+"" default indent
 """"""""""""""""""""""""""""""
-"" disable linux coding style
-let g:loaded_linuxsty = 1
+set smartindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set textwidth=80
+set colorcolumn=80
 
-if &filetype=="c" || &filetype=="sc" || &filetype=="h"
-	"" enable linux coding style
-	let g:loaded_linuxsty = 0
-elseif &filetype=="py"
-	" Load the whole plugin
-	"let g:pymode = 0
-	" python folding
-	let g:pymode_folding = 0
-else
-	set smartindent
-	set noexpandtab
-	set tabstop=8
-	set shiftwidth=8
-	set textwidth=80
-	set colorcolumn=80
-endif
-
+""""""""""""""""""""""""""""""
+"" python mode setting
+""""""""""""""""""""""""""""""
+" python folding
+let g:pymode_folding = 0
 
 """"""""""""""""""""""""""""""
 "" foldmethod
