@@ -34,7 +34,7 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 "" guifont
 """"""""""""""""""""""""""""""
 if has('gui_running')
-        set guifont=inconsolata\ 14
+	set guifont=inconsolata\ 14
 endif
 
 
@@ -90,9 +90,7 @@ let g:pymode_folding = 0
 """"""""""""""""""""""""""""""
 "" 256 colors at terminal
 """"""""""""""""""""""""""""""
-"if $TERM == "xterm-256color"
-	set t_Co=256
-"endif
+set t_Co=256
 
 
 """"""""""""""""""""""""""""""
