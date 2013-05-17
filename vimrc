@@ -34,7 +34,7 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 "" guifont
 """"""""""""""""""""""""""""""
 if has('gui_running')
-	set guifont=inconsolata\ 14
+	set guifont=Consolas\ 14
 endif
 
 
