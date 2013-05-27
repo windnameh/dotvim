@@ -98,41 +98,42 @@ set t_Co=256
 "" with Line highlight
 """"""""""""""""""""""""""""""
 "" molokai, solarized-dark, solarized-light
-"let s:vim_theme="Tomorrow-Night-Eighties"
-let s:vim_theme="molokai"
-"let s:vim_theme="solarized-dark"
-if !exists('s:vim_theme')
-	colorscheme Tomorrow-Night
-	set cursorline
-	highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
-elseif s:.vim_theme == "Tomorrow-Night-Eighties"
-	colorscheme Tomorrow-Night-Eighties
-	set cursorline
-	highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
-elseif s:.vim_theme == "molokai"
-	let g:molokai_original = 1
-	let g:rehash256 = 1
-	colorscheme molokai
-	set cursorline
-	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
-elseif s:.vim_theme == "solarized-dark"
-	set background=dark
-	if !has('gui_running')
-		let g:solarized_termcolors=256
+function! SetColorScheme(vim_theme)
+	if !exists('a:vim_theme')
+		colorscheme Tomorrow-Night
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+	elseif a:vim_theme == "Tomorrow-Night-Eighties"
+		colorscheme Tomorrow-Night-Eighties
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+	elseif a:vim_theme == "molokai"
+		let g:molokai_original = 1
+		let g:rehash256 = 1
+		colorscheme molokai
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=235 guibg=#262626
+	elseif a:vim_theme == "solarized-dark"
+		set background=dark
+		if !has('gui_running')
+			let g:solarized_termcolors=256
+		endif
+		colorscheme solarized
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=235 guibg=#262626
+	elseif a:vim_theme == "solarized-light"
+		set background=light
+		if !has('gui_running')
+			let g:solarized_termcolors=256
+		endif
+		colorscheme solarized
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=235 guibg=#262626
 	endif
-	colorscheme solarized
-	set cursorline
-	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
-elseif s:.vim_theme == "solarized-light"
-	set background=light
-	if !has('gui_running')
-		let g:solarized_termcolors=256
-	endif
-	colorscheme solarized
-	set cursorline
-	highlight CursorLine cterm=none ctermbg=235 guibg=#262626
-endif
+endfunction
 
+call SetColorScheme("molokai")
+autocmd FileType python call SetColorScheme("solarized-dark")
 
 """"""""""""""""""""""""""""""
 "" disable toolbar at gui mode
