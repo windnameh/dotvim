@@ -135,6 +135,7 @@ endfunction
 call SetColorScheme("molokai")
 autocmd FileType python call SetColorScheme("solarized-dark")
 
+
 """"""""""""""""""""""""""""""
 "" disable toolbar at gui mode
 """"""""""""""""""""""""""""""
