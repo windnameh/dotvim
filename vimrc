@@ -7,6 +7,7 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+
 """""""""""""""""""""""""""""
 "" pathogen
 """""""""""""""""""""""""""""
@@ -14,6 +15,7 @@ filetype off
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
+
 
 """""""""""""""""""""""""""""
 "" misc
@@ -27,7 +29,7 @@ set hlsearch
 set history=2000
 
 " Toggle line numbers and fold column for easy copying:
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+nnoremap <F2>n :set nonumber!<CR>:set foldcolumn=0<CR>
 
 
 """"""""""""""""""""""""""""""
@@ -42,7 +44,8 @@ endif
 "" back to last modified
 """"""""""""""""""""""""""""""
 if has("autocmd")
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") |
+				\ exe "normal! g`\"" | endif
 endif
 
 
@@ -53,10 +56,12 @@ filetype on
 filetype plugin on
 filetype indent on
 
+
 """"""""""""""""""""""""""""""
 "" ignored file
 """"""""""""""""""""""""""""""
 set wildignore=*.o
+
 
 """"""""""""""""""""""""""""""
 "" Spec C syntax highlight
@@ -71,14 +76,17 @@ set smartindent
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+set wrap
 set textwidth=80
 set colorcolumn=80
+
 
 """"""""""""""""""""""""""""""
 "" python mode setting
 """"""""""""""""""""""""""""""
 " python folding
 let g:pymode_folding = 0
+
 
 """"""""""""""""""""""""""""""
 "" foldmethod
@@ -91,6 +99,24 @@ let g:pymode_folding = 0
 "" 256 colors at terminal
 """"""""""""""""""""""""""""""
 set t_Co=256
+
+
+""""""""""""""""""""""""""""""
+"" 80 Column highlight
+""""""""""""""""""""""""""""""
+nnoremap <Leader>H :call<SID>LongLineHLToggle()<cr>
+hi OverLength cterm=none ctermbg=none
+match OverLength /\%>80v/
+fun! s:LongLineHLToggle()
+    if !exists('w:longlinehl')
+        let w:longlinehl = matchadd('ErrorMsg', '.\%>81v', 0)
+        echo "Long lines highlighted"
+    else
+        call matchdelete(w:longlinehl)
+        unl w:longlinehl
+        echo "Long lines unhighlighted"
+    endif
+endfunction
 
 
 """"""""""""""""""""""""""""""
