@@ -189,8 +189,19 @@ set cscopetag
 """"""""""""""""""""""""""""""
 "" neocomplcache
 """"""""""""""""""""""""""""""
-let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_enable_at_startup = 1
 
+
+""""""""""""""""""""""""""""""
+"" syntastic
+""""""""""""""""""""""""""""""
+let g:syntastic_always_populate_loc_list = 1
+
+
+""""""""""""""""""""""""""""""
+"" YouCompleteMe
+""""""""""""""""""""""""""""""
+let g:ycm_confirm_extra_conf = 0
 
 """"""""""""""""""""""""""""""
 "" Tagbar
