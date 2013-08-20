@@ -43,10 +43,10 @@ endif
 """"""""""""""""""""""""""""""
 "" back to last modified
 """"""""""""""""""""""""""""""
-if has("autocmd")
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") |
-				\ exe "normal! g`\"" | endif
-endif
+" make vim save and load the folding of the document each time it loads
+" also places the cursor in the last place that it was left.
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
 
 
 """"""""""""""""""""""""""""""
