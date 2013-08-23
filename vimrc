@@ -158,7 +158,7 @@ function! SetColorScheme(vim_theme)
 	endif
 endfunction
 
-call SetColorScheme("molokai")
+call SetColorScheme("Tomorrow-Night-Eighties")
 autocmd FileType python call SetColorScheme("solarized-dark")
 
 
