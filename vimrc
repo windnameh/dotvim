@@ -81,6 +81,7 @@ set textwidth=80
 set colorcolumn=80
 
 
+
 """"""""""""""""""""""""""""""
 "" python mode setting
 """"""""""""""""""""""""""""""
@@ -108,14 +109,14 @@ nnoremap <Leader>H :call<SID>LongLineHLToggle()<cr>
 hi OverLength cterm=none ctermbg=none
 match OverLength /\%>80v/
 fun! s:LongLineHLToggle()
-    if !exists('w:longlinehl')
-        let w:longlinehl = matchadd('ErrorMsg', '.\%>81v', 0)
-        echo "Long lines highlighted"
-    else
-        call matchdelete(w:longlinehl)
-        unl w:longlinehl
-        echo "Long lines unhighlighted"
-    endif
+	if !exists('w:longlinehl')
+		let w:longlinehl = matchadd('ErrorMsg', '.\%>81v', 0)
+		echo "Long lines highlighted"
+	else
+		call matchdelete(w:longlinehl)
+		unl w:longlinehl
+		echo "Long lines unhighlighted"
+	endif
 endfunction
 
 
@@ -158,7 +159,7 @@ function! SetColorScheme(vim_theme)
 	endif
 endfunction
 
-call SetColorScheme("Tomorrow-Night-Eighties")
+call SetColorScheme("molokai")
 autocmd FileType python call SetColorScheme("solarized-dark")
 
 

@@ -1,4 +1,5 @@
-" search function name                                                                                                                                                   
+" search function name
+
 function! ShowFuncName()
         let lnum = line(".")
         let col = col(".")

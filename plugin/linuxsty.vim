@@ -7,21 +7,15 @@
 " http://www.jukie.net/bart/blog/vim-and-linux-coding-style
 " and various user comments.
 
-if exists("g:loaded_linuxsty")
-    finish
-endif
-let g:loaded_linuxsty = 1
 
-set wildignore+=*.ko,*.mod.c,*.order,modules.builtin
-
-augroup linuxsty
-    autocmd!
-
+function! LinuxKernelCodingStyle()
+    set wildignore+=*.ko,*.mod.c,*.order,modules.builtin
+    "autocmd!
     autocmd FileType c,cpp call s:LinuxFormatting()
     autocmd FileType c,cpp call s:LinuxKeywords()
     autocmd FileType c,cpp call s:LinuxHighlighting()
     autocmd FileType diff,kconfig setlocal tabstop=8
-augroup END
+endfunction
 
 function s:LinuxFormatting()
     setlocal tabstop=8
