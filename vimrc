@@ -81,7 +81,6 @@ set textwidth=80
 set colorcolumn=80
 
 
-
 """"""""""""""""""""""""""""""
 "" python mode setting
 """"""""""""""""""""""""""""""
