@@ -37,3 +37,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
+[submodule "bundle/Dev-Delight"]
+	path = bundle/Dev-Delight
+	url = https://github.com/sandeepsinghmails/Dev_Delight.git

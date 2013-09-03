@@ -133,12 +133,16 @@ function! SetColorScheme(vim_theme)
 		colorscheme Tomorrow-Night-Eighties
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+	elseif a:vim_theme == "Dev_Delight"
+		colorscheme Dev_Delight
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=183 guibg=#dfafff
 	elseif a:vim_theme == "molokai"
 		let g:molokai_original = 1
 		let g:rehash256 = 1
 		colorscheme molokai
 		set cursorline
-		highlight CursorLine cterm=none ctermbg=235 guibg=#262626
+		highlight CursorLine cterm=none ctermbg=233 guibg=#1c1c1c
 	elseif a:vim_theme == "solarized-dark"
 		set background=dark
 		if !has('gui_running')
@@ -158,7 +162,11 @@ function! SetColorScheme(vim_theme)
 	endif
 endfunction
 
-call SetColorScheme("molokai")
+if !has('gui_running')
+	call SetColorScheme("molokai")
+else
+	call SetColorScheme("Dev_Delight")
+endif
 autocmd FileType python call SetColorScheme("solarized-dark")
 
 
