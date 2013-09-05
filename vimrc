@@ -125,8 +125,8 @@ endfunction
 """"""""""""""""""""""""""""""
 "" molokai, solarized-dark, solarized-light
 function! SetColorScheme(vim_theme)
-	if !exists('a:vim_theme')
-		colorscheme Tomorrow-Night
+	if !exists('a:vim_theme') || a:vim_theme == "jellybeans"
+		colorscheme jellybeans
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
 	elseif a:vim_theme == "Tomorrow-Night-Eighties"
@@ -163,11 +163,12 @@ function! SetColorScheme(vim_theme)
 endfunction
 
 if !has('gui_running')
-	call SetColorScheme("molokai")
+	call SetColorScheme("jellybeans")
 else
 	call SetColorScheme("Dev_Delight")
 endif
 autocmd FileType python call SetColorScheme("solarized-dark")
+autocmd FileType sh call SetColorScheme("solarized-dark")
 
 
 """"""""""""""""""""""""""""""
