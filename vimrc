@@ -233,7 +233,7 @@ let g:tagbar_sort = 0
 """"""""""""""""""""""""""""""
 "" NERDTree
 """"""""""""""""""""""""""""""
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>t :NERDTreeToggle<CR>
 " Set the window width
 let NERDTreeWinSize = 40
 " Set the window position
