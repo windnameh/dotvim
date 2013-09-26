@@ -45,8 +45,8 @@ endif
 """"""""""""""""""""""""""""""
 " make vim save and load the folding of the document each time it loads
 " also places the cursor in the last place that it was left.
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
 
 
 """"""""""""""""""""""""""""""
@@ -233,7 +233,7 @@ let g:tagbar_sort = 0
 """"""""""""""""""""""""""""""
 "" NERDTree
 """"""""""""""""""""""""""""""
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>t :NERDTreeToggle<CR>
 " Set the window width
 let NERDTreeWinSize = 40
 " Set the window position
