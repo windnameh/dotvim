@@ -1,5 +1,5 @@
 " Vim plugin to fit the Linux kernel coding style and help kernel development
-" Last Change:  2013 Mars 28
+" Last Change:  2013 Jun 28
 " Maintainer:   Vivien Didelot <vivien.didelot@savoirfairelinux.com>
 " License:      Distributed under the same terms as Vim itself.
 "
@@ -7,20 +7,26 @@
 " http://www.jukie.net/bart/blog/vim-and-linux-coding-style
 " and various user comments.
 
+if exists("g:loaded_linuxsty_tab4")
+    finish
+endif
+let g:loaded_linuxsty_tab4 = 1
 
-function! LinuxKernelCodingStyle()
-    set wildignore+=*.ko,*.mod.c,*.order,modules.builtin
+set wildignore+=*.ko,*.mod.c,*.order,modules.builtin
+
+augroup linuxsty
     autocmd!
+
     autocmd FileType c,cpp call s:LinuxFormatting()
     autocmd FileType c,cpp call s:LinuxKeywords()
     autocmd FileType c,cpp call s:LinuxHighlighting()
-    autocmd FileType diff,kconfig setlocal tabstop=8
-endfunction
+    autocmd FileType diff,kconfig setlocal tabstop=4
+augroup END
 
 function s:LinuxFormatting()
-    setlocal tabstop=8
-    setlocal shiftwidth=8
-    setlocal softtabstop=8
+    setlocal tabstop=4
+    setlocal shiftwidth=4
+    setlocal softtabstop=4
     setlocal textwidth=80
     setlocal noexpandtab
 
