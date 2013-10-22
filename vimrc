@@ -79,6 +79,7 @@ set shiftwidth=4
 set wrap
 set textwidth=80
 set colorcolumn=80
+autocmd FileType,BufNewFile,BufRead c,cpp,objc,*.mm call GoogleCodingStyle()
 
 
 """"""""""""""""""""""""""""""

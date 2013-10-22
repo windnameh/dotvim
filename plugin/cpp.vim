@@ -1,5 +1,5 @@
 " Detect if the current file type is a C-like language.
-"au BufNewFile,BufRead c,cpp,objc,*.mm call SetupForCLang()
+"au BufNewFile,BufRead c,cpp,objc,*.mm call CPPCodingStyle()
 
 " Configuration for C-like languages.
 function! CPPCodingStyle()
