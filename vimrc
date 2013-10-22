@@ -130,6 +130,10 @@ function! SetColorScheme(vim_theme)
 		colorscheme jellybeans
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+	elseif a:vim_theme == "ir_black"
+		colorscheme ir_black
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
 	elseif a:vim_theme == "Tomorrow-Night-Eighties"
 		colorscheme Tomorrow-Night-Eighties
 		set cursorline
@@ -166,7 +170,7 @@ endfunction
 if !has('gui_running')
 	call SetColorScheme("jellybeans")
 else
-	call SetColorScheme("Dev_Delight")
+	call SetColorScheme("ir_black")
 endif
 autocmd FileType python call SetColorScheme("solarized-dark")
 autocmd FileType sh call SetColorScheme("solarized-dark")
