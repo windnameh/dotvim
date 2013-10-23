@@ -215,13 +215,6 @@ let g:ycm_confirm_extra_conf = 0
 
 
 """"""""""""""""""""""""""""""
-"" Ultisnips
-""""""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger="<c-a>"
-"let g:UltiSnipsListSnippets="<c-l>"
-
-
-""""""""""""""""""""""""""""""
 "" Tagbar
 """"""""""""""""""""""""""""""
 nmap <F12> :TagbarToggle<CR>
