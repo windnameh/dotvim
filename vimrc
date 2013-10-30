@@ -12,6 +12,8 @@
 "" pathogen
 """""""""""""""""""""""""""""
 filetype off
+"let g:pathogen_disabled = []
+"call add(g:pathogen_disabled, 'vim-airline')
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
@@ -201,8 +203,16 @@ set cscopetag
 
 
 """"""""""""""""""""""""""""""
+"" airline
+""""""""""""""""""""""""""""""
+let g:airline#extensions#syntastic#enabled = 0
+
+
+""""""""""""""""""""""""""""""
 "" syntastic
 """"""""""""""""""""""""""""""
+let g:syntastic_mode_map = { 'mode': 'passive' }
+let g:syntastic_echo_current_error = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_always_populate_loc_list = 1
