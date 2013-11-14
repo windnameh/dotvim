@@ -203,6 +203,13 @@ set cscopetag
 
 
 """"""""""""""""""""""""""""""
+"" airline
+""""""""""""""""""""""""""""""
+let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+
+
+""""""""""""""""""""""""""""""
 "" syntastic
 """"""""""""""""""""""""""""""
 let g:syntastic_mode_map = { 'mode': 'passive' }
