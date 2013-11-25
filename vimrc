@@ -172,7 +172,8 @@ endfunction
 if !has('gui_running')
 	call SetColorScheme("jellybeans")
 else
-	call SetColorScheme("ir_black")
+	"call SetColorScheme("ir_black")
+	call SetColorScheme("jellybeans")
 endif
 autocmd FileType python call SetColorScheme("solarized-dark")
 autocmd FileType sh call SetColorScheme("solarized-dark")
@@ -228,6 +229,10 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 "" YouCompleteMe
 """"""""""""""""""""""""""""""
 let g:ycm_confirm_extra_conf = 0
+
+" disable preview window
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
 
 """"""""""""""""""""""""""""""
