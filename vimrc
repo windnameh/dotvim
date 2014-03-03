@@ -99,9 +99,12 @@ let g:pymode_folding = 0
 
 
 """"""""""""""""""""""""""""""
-"" 256 colors at terminal
+"" terminal settings
 """"""""""""""""""""""""""""""
+" 256 colors at terminal
 set t_Co=256
+" remove background color
+set t_ut=
 
 
 """"""""""""""""""""""""""""""
