@@ -35,6 +35,15 @@ nnoremap <F2>n :set nonumber!<CR>:set foldcolumn=0<CR>
 
 
 """"""""""""""""""""""""""""""
+"" shortcuts
+""""""""""""""""""""""""""""""
+" goto next buffer
+map <C-N> :bn<CR>
+" goto previous buffer
+map <C-P> :bp<CR>
+
+
+""""""""""""""""""""""""""""""
 "" guifont
 """"""""""""""""""""""""""""""
 if has('gui_running')
