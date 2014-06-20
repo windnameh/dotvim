@@ -277,3 +277,10 @@ let g:gundo_width = 60
 let g:gundo_preview_height = 40
 let g:gundo_right = 1
 nnoremap <F5> :GundoToggle<CR>
+
+
+""""""""""""""""""""""""""""""
+"" clang-format
+""""""""""""""""""""""""""""""
+map <C-K> :pyf ~/.vim/clang-format.py<CR>
+imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
