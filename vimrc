@@ -94,13 +94,6 @@ autocmd FileType,BufNewFile,BufRead c,cpp,objc,*.mm call GoogleCodingStyle()
 
 
 """"""""""""""""""""""""""""""
-"" python mode setting
-""""""""""""""""""""""""""""""
-" python folding
-let g:pymode_folding = 0
-
-
-""""""""""""""""""""""""""""""
 "" foldmethod
 """"""""""""""""""""""""""""""
 "set foldmethod=syntax
