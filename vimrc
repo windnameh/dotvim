@@ -224,21 +224,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 
 
 """"""""""""""""""""""""""""""
-"" syntastic
-""""""""""""""""""""""""""""""
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_echo_current_error = 0
-let g:syntastic_enable_signs = 0
-let g:syntastic_enable_highlighting = 0
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-
-
-""""""""""""""""""""""""""""""
 "" YouCompleteMe
 """"""""""""""""""""""""""""""
 let g:ycm_confirm_extra_conf = 0
