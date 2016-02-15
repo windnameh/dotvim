@@ -126,7 +126,6 @@ fun! s:LongLineHLToggle()
 	endif
 endfunction
 
-
 """"""""""""""""""""""""""""""
 "" colorscheme settting
 "" with Line highlight
@@ -134,6 +133,7 @@ endfunction
 "" molokai, solarized-dark, solarized-light
 function! SetColorScheme(vim_theme)
 	if !exists('a:vim_theme') || a:vim_theme == "jellybeans"
+		let g:jellybeans_background_color_256 = 233
 		colorscheme jellybeans
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
