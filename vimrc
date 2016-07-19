@@ -28,7 +28,7 @@ set noic	"noic: case sensitive ic: case insensitive
 set ruler
 set number
 set hlsearch
-set history=2000
+set history=1000
 
 " Toggle line numbers and fold column for easy copying:
 nnoremap <F2>n :set nonumber!<CR>:set foldcolumn=0<CR>
@@ -73,13 +73,6 @@ filetype indent on
 """"""""""""""""""""""""""""""
 set wildignore=*.o
 
-
-""""""""""""""""""""""""""""""
-"" Spec C syntax highlight
-""""""""""""""""""""""""""""""
-autocmd BufRead,BufNewFile *.sc set filetype=c
-
-
 """"""""""""""""""""""""""""""
 "" default indent
 """"""""""""""""""""""""""""""
@@ -90,7 +83,6 @@ set shiftwidth=4
 set wrap
 set textwidth=80
 set colorcolumn=80
-autocmd FileType,BufNewFile,BufRead c,cpp,objc,*.mm call GoogleCodingStyle()
 
 
 """"""""""""""""""""""""""""""
