@@ -107,7 +107,7 @@ set t_ut=
 nnoremap <Leader>H :call<SID>LongLineHLToggle()<cr>
 hi OverLength cterm=none ctermbg=none
 match OverLength /\%>80v/
-fun! s:LongLineHLToggle()
+function! s:LongLineHLToggle()
 	if !exists('w:longlinehl')
 		let w:longlinehl = matchadd('ErrorMsg', '.\%>81v', 0)
 		echo "Long lines highlighted"
@@ -188,7 +188,7 @@ set guioptions-=L  "remove Taglist scroll bar
 """"""""""""""""""""""""""""""
 "" cflow
 """"""""""""""""""""""""""""""
-au BufNewFile,BufRead *.cflow setf cflow
+autocmd BufNewFile,BufRead *.cflow setf cflow
 
 
 """"""""""""""""""""""""""""""
@@ -254,5 +254,8 @@ nnoremap <F5> :GundoToggle<CR>
 """"""""""""""""""""""""""""""
 "" clang-format
 """"""""""""""""""""""""""""""
-map <C-K> :pyf ~/.vim/clang-format.py<CR>
-imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
+function! SetVimClangFormat()
+	map <C-K> :pyf ~/.vim/clang-format.py<CR>
+	imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
+endfunction
+autocmd FileType,BufNewFile,BufRead c,cpp,h,hh,hpp call SetVimClangFormat()
