@@ -213,7 +213,7 @@ let g:airline#extensions#tabline#show_buffers = 0
 "" YouCompleteMe
 """"""""""""""""""""""""""""""
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_register_as_syntastic_checker = 0
+let g:ycm_show_diagnostics_ui = 0
 
 " disable preview window
 set completeopt-=preview
