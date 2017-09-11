@@ -147,6 +147,10 @@ function! SetColorScheme(vim_theme)
 		colorscheme molokai
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=233 guibg=#1c1c1c
+	elseif a:vim_theme == "vimbrant"
+		colorscheme vimbrant
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=233 guibg=#1c1c1c
 	elseif a:vim_theme == "solarized-dark"
 		set background=dark
 		if !has('gui_running')
@@ -167,6 +171,7 @@ function! SetColorScheme(vim_theme)
 endfunction
 
 if !has('gui_running')
+	"call SetColorScheme("vimbrant")
 	call SetColorScheme("jellybeans")
 else
 	"call SetColorScheme("ir_black")
