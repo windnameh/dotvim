@@ -172,8 +172,9 @@ else
 	"call SetColorScheme("ir_black")
 	call SetColorScheme("jellybeans")
 endif
-autocmd FileType python call SetColorScheme("solarized-dark")
-autocmd FileType sh call SetColorScheme("solarized-dark")
+
+"autocmd FileType python call SetColorScheme("solarized-dark")
+"autocmd FileType sh call SetColorScheme("solarized-dark")
 
 
 """"""""""""""""""""""""""""""
