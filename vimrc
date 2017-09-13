@@ -213,6 +213,7 @@ set cscopeprg='gtags-cscope'
 let g:airline#extensions#syntastic#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#show_buffers = 0
+"let g:airline_theme='jellybeans'
 
 
 """"""""""""""""""""""""""""""
