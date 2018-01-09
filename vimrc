@@ -221,6 +221,7 @@ let g:airline#extensions#tabline#show_buffers = 0
 """"""""""""""""""""""""""""""
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_show_diagnostics_ui = 0
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " disable preview window
 set completeopt-=preview
@@ -266,3 +267,9 @@ function! SetVimClangFormat()
 	imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 endfunction
 autocmd FileType,BufNewFile,BufRead c,cpp,h,hh,hpp call SetVimClangFormat()
+
+
+""""""""""""""""""""""""""""""
+"" python yapf
+""""""""""""""""""""""""""""""
+autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
