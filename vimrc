@@ -273,3 +273,9 @@ autocmd FileType,BufNewFile,BufRead c,cpp,h,hh,hpp call SetVimClangFormat()
 "" python yapf
 """"""""""""""""""""""""""""""
 autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+
+
+""""""""""""""""""""""""""""""
+"" makrdown
+""""""""""""""""""""""""""""""
+let g:vim_markdown_folding_disabled = 1
