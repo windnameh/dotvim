@@ -46,3 +46,6 @@
 [submodule "bundle/vim-markdown-preview"]
 	path = bundle/vim-markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
+[submodule "bundle/vim-plugin-AnsiEsc"]
+	path = bundle/vim-plugin-AnsiEsc
+	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
