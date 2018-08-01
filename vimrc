@@ -157,10 +157,6 @@ function! SetColorScheme(vim_theme)
 		colorscheme Tomorrow-Night-Eighties
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
-	elseif a:vim_theme == "Dev_Delight"
-		colorscheme Dev_Delight
-		set cursorline
-		highlight CursorLine cterm=none ctermbg=183 guibg=#dfafff
 	elseif a:vim_theme == "molokai"
 		let g:molokai_original = 1
 		let g:rehash256 = 1
