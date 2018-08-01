@@ -149,6 +149,8 @@ function! SetColorScheme(vim_theme)
 		colorscheme jellybeans
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+        let g:airline_theme='jellybeans'
+		let g:lightline = { 'colorscheme': 'jellybeans' }
 	elseif a:vim_theme == "ir_black"
 		colorscheme ir_black
 		set cursorline
@@ -157,6 +159,12 @@ function! SetColorScheme(vim_theme)
 		colorscheme Tomorrow-Night-Eighties
 		set cursorline
 		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+	elseif a:vim_theme == "tender"
+		colorscheme tender
+		set cursorline
+		highlight CursorLine cterm=none ctermbg=234 guibg=#1c1c1c
+		let g:airline_theme = 'tender'
+		let g:lightline = { 'colorscheme': 'tender' }
 	elseif a:vim_theme == "molokai"
 		let g:molokai_original = 1
 		let g:rehash256 = 1
@@ -187,10 +195,10 @@ function! SetColorScheme(vim_theme)
 endfunction
 
 if !has('gui_running')
-	"call SetColorScheme("vimbrant")
+	"call SetColorScheme("tender")
 	call SetColorScheme("jellybeans")
 else
-	"call SetColorScheme("ir_black")
+	"call SetColorScheme("tender")
 	call SetColorScheme("jellybeans")
 endif
 
@@ -229,7 +237,6 @@ set cscopeprg='gtags-cscope'
 let g:airline#extensions#syntastic#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#show_buffers = 0
-"let g:airline_theme='jellybeans'
 
 
 """"""""""""""""""""""""""""""

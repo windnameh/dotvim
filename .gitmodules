@@ -46,3 +46,6 @@
 [submodule "bundle/vim-plugin-AnsiEsc"]
 	path = bundle/vim-plugin-AnsiEsc
 	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
+[submodule "bundle/tender.vim"]
+	path = bundle/tender.vim
+	url = https://github.com/jacoborus/tender.vim.git
